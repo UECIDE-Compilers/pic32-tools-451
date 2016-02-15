@@ -1,7 +1,7 @@
-SRC_WINDOWS=https://s3.amazonaws.com/chipkit/compilers/pic32-tools-win32-image-20140530.zip
-SRC_LINUX=https://s3.amazonaws.com/chipkit/compilers/pic32-tools-Linux32-image-20140530.zip
-SRC_OSX=https://s3.amazonaws.com/chipkit/compilers/pic32-tools-Darwin-image-20140530.zip
-SRC_ARM=https://s3.amazonaws.com/chipkit/compilers/pic32-tools-arm-linux-image-20140530.zip
+SRC_WINDOWS=https://s3.amazonaws.com/chipkit/compilers/pic32-tools-chipKIT-cxx-master-win32-image-20130228.zip
+SRC_LINUX=https://s3.amazonaws.com/chipkit/compilers/pic32-tools-chipKIT-cxx-master-Linux32-image-20130228.zip
+SRC_OSX=https://s3.amazonaws.com/chipkit/compilers/pic32-tools-chipKIT-cxx-master-Darwin-image-20130228.zip
+SRC_ARM=https://s3.amazonaws.com/chipkit/compilers/pic32-tools-chipKIT-cxx-master-arm-linux-image.zip
 
 build:
 
@@ -15,11 +15,11 @@ install-linux-amd64:
 	unzip -qq -d tmp pic32-tools-linux-amd64.zip
 	find tmp -name '*\*-gdb.py' -delete
 	mkdir -p ${DESTDIR}/compilers
-	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-452
-	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-452/compiler.txt
-	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-452/pic32mx/lib/libc.a
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/bin/*
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/pic32mx/bin/*
+	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-451
+	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-451/compiler.txt
+	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-451/pic32mx/lib/libc.a
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/bin/*
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/pic32mx/bin/*
 	rm -rf tmp
 
 install-linux-i386:
@@ -30,11 +30,11 @@ install-linux-i386:
 	unzip -qq -d tmp pic32-tools-linux-i386.zip
 	find tmp -name '*\*-gdb.py' -delete
 	mkdir -p ${DESTDIR}/compilers
-	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-452
-	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-452/compiler.txt
-	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-452/pic32mx/lib/libc.a
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/bin/*
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/pic32mx/bin/*
+	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-451
+	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-451/compiler.txt
+	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-451/pic32mx/lib/libc.a
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/bin/*
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/pic32mx/bin/*
 	rm -rf tmp
 
 install-linux-armhf:
@@ -45,11 +45,11 @@ install-linux-armhf:
 	unzip -qq -d tmp pic32-tools-linux-armhf.zip
 	find tmp -name '*\*-gdb.py' -delete
 	mkdir -p ${DESTDIR}/compilers
-	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-452
-	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-452/compiler.txt
-	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-452/pic32mx/lib/libc.a
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/bin/*
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/pic32mx/bin/*
+	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-451
+	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-451/compiler.txt
+	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-451/pic32mx/lib/libc.a
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/bin/*
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/pic32mx/bin/*
 	rm -rf tmp
 
 install-linux-armel:
@@ -60,11 +60,11 @@ install-linux-armel:
 	unzip -qq -d tmp pic32-tools-linux-armel.zip
 	find tmp -name '*\*-gdb.py' -delete
 	mkdir -p ${DESTDIR}/compilers
-	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-452
-	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-452/compiler.txt
-	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-452/pic32mx/lib/libc.a
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/bin/*
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/pic32mx/bin/*
+	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-451
+	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-451/compiler.txt
+	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-451/pic32mx/lib/libc.a
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/bin/*
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/pic32mx/bin/*
 	rm -rf tmp
 
 install-windows-amd64:
@@ -75,11 +75,11 @@ install-windows-amd64:
 	unzip -qq -d tmp pic32-tools-windows-amd64.zip
 	find tmp -name '*\*-gdb.py' -delete
 	mkdir -p ${DESTDIR}/compilers
-	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-452
-	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-452/compiler.txt
-	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-452/pic32mx/lib/libc.a
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/bin/*
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/pic32mx/bin/*
+	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-451
+	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-451/compiler.txt
+	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-451/pic32mx/lib/libc.a
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/bin/*
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/pic32mx/bin/*
 	rm -rf tmp
 
 install-windows-i386:
@@ -90,11 +90,11 @@ install-windows-i386:
 	unzip -qq -d tmp pic32-tools-windows-i386.zip
 	find tmp -name '*\*-gdb.py' -delete
 	mkdir -p ${DESTDIR}/compilers
-	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-452
-	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-452/compiler.txt
-	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-452/pic32mx/lib/libc.a
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/bin/*
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/pic32mx/bin/*
+	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-451
+	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-451/compiler.txt
+	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-451/pic32mx/lib/libc.a
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/bin/*
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/pic32mx/bin/*
 	rm -rf tmp
 
 install-darwin-amd64:
@@ -105,11 +105,11 @@ install-darwin-amd64:
 	unzip -qq -d tmp pic32-tools-darwin-amd64.zip
 	find tmp -name '*\*-gdb.py' -delete
 	mkdir -p ${DESTDIR}/compilers
-	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-452
-	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-452/compiler.txt
-	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-452/pic32mx/lib/libc.a
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/bin/*
-	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-452/pic32mx/bin/*
+	mv tmp/pic32-tools ${DESTDIR}/compilers/pic32-tools-451
+	cp config/compiler.txt ${DESTDIR}/compilers/pic32-tools-451/compiler.txt
+	cp config/libc.a ${DESTDIR}/compilers/pic32-tools-451/pic32mx/lib/libc.a
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/bin/*
+	chmod -R 0755 ${DESTDIR}/compilers/pic32-tools-451/pic32mx/bin/*
 	rm -rf tmp
 
 packages:
