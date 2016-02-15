@@ -12,6 +12,7 @@ Standards-Version: 3.9.4
 Package: pic32-tools-451
 Architecture: any
 Depends: 
+XBSC-Group: PIC32
 Description: PIC32 Compiler for MX version 4.5.1
  Legacy PIC32 compiler for MX chips only.
  .
